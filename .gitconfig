@@ -29,6 +29,7 @@
 	editor = nano
 	trustctime = false
 	untrackedCache = true
+	excludesfile = /Users/vot/.gitignore_global
 [color]
 	ui = auto
 [color "branch"]
@@ -52,3 +53,14 @@
 	renames = copies
 [include]
 	path = ~/.gitconfig.personal
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Valenti Erra
+	email = valentierr@tuta.io
+[commit]
+	template = /Users/vot/.stCommitMsg
